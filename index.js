@@ -1,3 +1,5 @@
+let inventory= document.createElement('div')
+
 function newImage(url, left, bottom){
     let object = document.createElement('img')
     object.src = url
@@ -8,9 +10,10 @@ function newImage(url, left, bottom){
     return object
 }
 
+
 function newItem(url, left, bottom) {
     let item = newImage(url, left, bottom)
-    item.addEventListener('click', function () {
+    item.addEventListener('click', () => {
         item.remove()
         let inventoryItem = document.createElement('img')
         inventoryItem.src = url
@@ -19,7 +22,7 @@ function newItem(url, left, bottom) {
 }
 
 function newInventory() {
-    let inventory= document.createElement('div')
+    
     inventory.style.position = 'fixed'
     inventory.style.bottom = '0px';
     inventory.style.left = '0px'
